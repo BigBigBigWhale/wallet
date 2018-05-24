@@ -30,7 +30,7 @@
     position: relative;
     padding: .14rem 0;
     /*margin: 10px 1px;*/
-    font-size: 14px;
+    font-size: 0.14rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0;
@@ -43,7 +43,7 @@
   }
 
   a.button:active {
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.04rem 0.05rem 0 rgba(0, 0, 0, 0.14), 0 0.01rem 0.1rem 0 rgba(0, 0, 0, 0.12), 0 0.02rem 0.04rem -0.01rem rgba(0, 0, 0, 0.2);
   }
   /*button 扩展样式*/
   a.button.default {

@@ -1,16 +1,15 @@
 <template>
-  <div class="hello">
+  <div class="wallet">
     錢包
-    <BaseButton>btn</BaseButton>
   </div>
 </template>
 
 <script>
-import BaseButton from '../components/baseButton'
+import '../style/wallet.less'
 export default {
   name: 'Wallet',
   components:{
-    BaseButton
+
   },
   data () {
     return {

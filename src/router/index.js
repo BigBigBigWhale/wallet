@@ -11,22 +11,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Wallet',
+      name: '钱包',
       component: Wallet
     },
     {
       path: '/price',
-      name: 'Price',
+      name: '行情',
       component: Price
     },
     {
       path: '/trade',
-      name: 'Trade',
+      name: '交易',
       component: Trade
     },
     {
       path: '/personal',
-      name: 'Personal',
+      name: '我的',
       component: Personal
     },
   ]

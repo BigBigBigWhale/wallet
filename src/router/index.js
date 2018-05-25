@@ -4,10 +4,10 @@ import Wallet from '../module/wallet'
 import Price from '../module/price'
 import Trade from '../module/trade'
 import Personal from '../module/personal'
-
+import Login from '../module/login'
 Vue.use(Router);
 
-export default new Router({
+var router = new Router({
   routes: [
     {
       path: '/',
@@ -29,5 +29,11 @@ export default new Router({
       name: '我的',
       component: Personal
     },
-  ]
-})
+    {
+      path: '/login',
+      name: '登陆',
+      component: Login
+    },
+  ],
+});
+export default router;

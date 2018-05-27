@@ -52,7 +52,7 @@ export default {
   methods:{
     checkLogin (path){//检查登陆状态
       if(!!!unwantedLogin[path]&&!globalDate.user){//未登录的跳转到登陆页面
-//        this.$router.push("/login");//暂时隐藏，等登录做好了
+        this.$router.push("/login");//暂时隐藏，等登录做好了
         return;
       }
       if(!!unwantedLogin[path]&&globalDate.user){//登录的跳转到首页

@@ -22,6 +22,8 @@
 import './style/app.less'
 import globalDate from './router/globalDate'
 import BaseButton from './components/baseButton'
+import Storage from './components/Storage'
+
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
 var hasNav = {};
 var unwantedLogin= {'/login':true,'/register':true};
@@ -50,7 +52,7 @@ export default {
   methods:{
     checkLogin (path){//检查登陆状态
       if(!!!unwantedLogin[path]&&!globalDate.user){//未登录的跳转到登陆页面
-        this.$router.push("/login");
+        this.$router.push("/login");//暂时隐藏，等登录做好了
         return;
       }
       if(!!unwantedLogin[path]&&globalDate.user){//登录的跳转到首页
@@ -72,6 +74,8 @@ export default {
     this.checkLogin(this.$route.path);
     this.hasFooter = !!hasFooter[this.$route.path];
     this.hasNav = !!hasNav[this.$route.path];
+    let storage = new Storage('login', window.localStorage);
+//    globalDate.user = storage.get('user') || null;
   },
   mounted (){
       console.log(this.$route.path)

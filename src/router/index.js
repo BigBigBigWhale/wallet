@@ -5,6 +5,8 @@ import Price from '../module/price'
 import Trade from '../module/trade'
 import Personal from '../module/personal'
 import Login from '../module/login'
+import Register from '../module/register'
+import ForgetPassword from '../module/forgetPassword'
 Vue.use(Router);
 
 var router = new Router({
@@ -33,6 +35,16 @@ var router = new Router({
       path: '/login',
       name: '登陆',
       component: Login
+    },
+    {
+      path: '/register',
+      name: '注册',
+      component: Register
+    },
+    {
+      path: '/Forget-password',
+      name: '忘记密码',
+      component: ForgetPassword
     },
   ],
 });

@@ -14,14 +14,14 @@
     </div>
     <form>
       <div class="login-input-box">
-        <input type="text" name="user" placeholder="手机号">
+        <input type="text" name="user" placeholder="手机号" v-model="username">
       </div>
       <div class="login-input-box">
-        <input type="password" name="password" placeholder="密码">
+        <input type="password" name="password" placeholder="密码" v-model="password">
       </div>
-      <button type="submit">登录</button>
+      <button type="submit" @click="login()">登录</button>
       <div class="login-tips">
-        <span>注册账号</span><span>忘记密码</span>
+        <router-link to="/register">注册账号</router-link><router-link to="/forget-password">忘记密码</router-link>
       </div>
     </form>
   </div>
@@ -29,12 +29,25 @@
 
 <script>
     import '../style/login.less'
+    import globalDate from '../router/globalDate'
+    import Storage from '../components/Storage'
+    var storage = new Storage('login', window.localStorage);
     export default {
         name:'login',
         data: function () {
             return {
-
+                username:'',
+                password:''
             }
-        }
+        },
+      methods:{
+        login (){
+          event.preventDefault();
+          if(this.username&&this.password){
+            globalDate.user = this.username;
+            storage.set('user',this.username);
+          }
+          }
+      }
     }
 </script>

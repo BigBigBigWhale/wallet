@@ -71,11 +71,11 @@ export default {
 
   },
   created (){//第一次加载时router没有监控到，检测登陆、底部导航栏、头部导航栏
+    let storage = new Storage('login', window.localStorage);
+    globalDate.user = storage.get('user') || null;
     this.checkLogin(this.$route.path);
     this.hasFooter = !!hasFooter[this.$route.path];
     this.hasNav = !!hasNav[this.$route.path];
-    let storage = new Storage('login', window.localStorage);
-//    globalDate.user = storage.get('user') || null;
   },
   mounted (){
       console.log(this.$route.path)

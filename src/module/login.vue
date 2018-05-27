@@ -46,6 +46,7 @@
           if(this.username&&this.password){
             globalDate.user = this.username;
             storage.set('user',this.username);
+            this.$router.push("/");
           }
           }
       }

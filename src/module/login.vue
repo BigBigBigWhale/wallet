@@ -1,28 +1,35 @@
 <template>
   <div class="login">
     <div class="login-title">
+      <div class="to-register">
+        <router-link to="/register">注册账号</router-link>
+      </div>
       登录
-      <div class="language">
-        <select name="" id="">
-          <option value="">简体中文</option>
-          <option value="">English</option>
-        </select>
+      <div class="language" @click="isChoiceLanguage=!isChoiceLanguage">
+        <img src="../assets/icon/icon-china.png" alt="" v-if="language=='zh'">
+        <img src="" alt="" v-else>
+        <div class="language-opt" v-if="isChoiceLanguage">
+            <ul>
+              <li @click="choiceLanguage('zh')">中文 <img src="../assets/icon/icon-china.png" alt=""></li>
+              <li @click="choiceLanguage('en')">英语 <img src="../assets/icon/icon-china.png" alt=""></li>
+            </ul>
+        </div>
       </div>
     </div>
     <div class="login-sign">
-      <img src="../assets/login_title.png" alt="">
+      <img src="../assets/icon/icon-logo.png" alt="">
     </div>
     <form>
       <div class="login-input-box">
-        <input type="text" name="user" placeholder="手机号" v-model="username">
+        <label for="phone">手机号</label>
+        <input type="number" name="phone" id="phone" placeholder="请输入手机号" v-model="phone">
       </div>
       <div class="login-input-box">
-        <input type="password" name="password" placeholder="密码" v-model="password">
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" placeholder="请输入密码" v-model="password">
+        <router-link to="/forget-password" class="forget-password">忘记密码</router-link>
       </div>
-      <button type="submit" @click="login()">登录</button>
-      <div class="login-tips">
-        <router-link to="/register">注册账号</router-link><router-link to="/forget-password">忘记密码</router-link>
-      </div>
+      <button type="submit" @click.prevent="login()">登录</button>
     </form>
   </div>
 </template>
@@ -31,24 +38,44 @@
     import '../style/login.less'
     import globalDate from '../router/globalDate'
     import Storage from '../components/Storage'
+    import VerifyRule from '../components/verifyRule'
     var storage = new Storage('login', window.localStorage);
     export default {
         name:'login',
-        data: function () {
+        data () {
             return {
-                username:'',
-                password:''
+                phone:'',
+                password:'',
+                language:'zh',
+                isChoiceLanguage:false,
             }
         },
-      methods:{
-        login (){
-          event.preventDefault();
-          if(this.username&&this.password){
-            globalDate.user = this.username;
-            storage.set('user',this.username);
-            this.$router.push("/");
+        watch:{
+          language (){
+              window.localStorage.setItem('language',this.language);
           }
+        },
+        methods:{
+          login (){
+            var result = VerifyRule([
+              {name:'phone',rule:[{type:'required',message:'请输入手机号'},{type:'phone'}],value:this.phone},
+              {name:'password',rule:[{type:'required',message:'请输入密码'}],value:this.password},
+              ]);
+            if(result.success){
+              globalDate.user = this.phone;
+              storage.set('user',this.phone);
+              //TODO 访问登陆借口
+              this.$router.push("/");
+            }else{
+              alert(result.message);
+            }
+          },
+          choiceLanguage (type){
+              this.language = type;
           }
-      }
+        },
+        created (){
+            this.language = window.localStorage.getItem('language') || 'zh';
+        }
     }
 </script>

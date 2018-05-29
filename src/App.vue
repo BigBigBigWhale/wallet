@@ -26,7 +26,7 @@ import Storage from './components/Storage'
 
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
 var hasNav = {};
-var unwantedLogin= {'/login':true,'/register':true};
+var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true};
 export default {
   name: 'App',
   components:{

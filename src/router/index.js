@@ -42,7 +42,7 @@ var router = new Router({
       component: Register
     },
     {
-      path: '/Forget-password',
+      path: '/forget-password',
       name: '忘记密码',
       component: ForgetPassword
     },

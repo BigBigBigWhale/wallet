@@ -10,12 +10,18 @@
     color: #fff;
     line-height: .9rem;
     font-size: .36rem;
+    .to-register{
+      position: absolute;
+      left: 0.3rem;
+      top: 0.04rem;
+      font-size: .28rem;
+    }
     .language{
       position: absolute;
       right: .3rem;
       display: inline-block;
       width: 1.4rem;
-      height: .4rem;
+      height: .9rem;
       border-radius: 5px;
       &:after{
         content: "";
@@ -28,26 +34,48 @@
         //给自定义的图标实现点击下来功能
         pointer-events: none;
       }
-    }
-    select{
-      border: none;
-      outline: none;
-      width: 100%;
-      font-size: .28rem;
-      color: #fff;
-      height: .4rem;
-      line-height: .4rem;
-      //隐藏select的下拉图标
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background-color: transparent;
+      &>img{
+          position: absolute;
+          top: 0.3rem;
+          right: .4rem;
+          width: 0.48rem;
+          height: 0.32rem;
+          width: auto;
+      }
+      .language-opt{
+        position: absolute;
+        top: .9rem;
+        right: 0;
+        width: 1.6rem;
+        background-color: #fff;
+        ul{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li{
+            display: flex;
+            align-items: center;
+            font-size: .2rem;
+            color: #000;
+            height: .6rem;
+            padding: 0 0.2rem;
+            border-bottom: 0.01rem solid #666;
+            &:nth-last-of-type(1){
+              border-bottom: none;
+            }
+            img{
+                height: 0.28rem;
+                margin: 0 0 0 .2rem;
+            }
+          }
+        }
+      }
     }
   }
   .login-sign{
     margin: .6rem 0;
      img{
-       width: 5rem;
+       width: 2rem;
        height: auto;
      }
   }
@@ -60,18 +88,53 @@
     input{
       caret-color:#5CACE1;
       border: none;
-      border-bottom: .01rem solid #5CACE1;
       background-color: transparent;
       font-size: .3rem;
-      width: 100%;
-      padding: .1rem 0;
+      padding: .16rem 0;
       &:focus{
         outline: none;
       }
     }
     .login-input-box{
+      position: relative;
       width: 60%;
+      overflow: hidden;
+      font-size: 0;
       margin: .2rem auto;
+      border-bottom: .01rem solid #5CACE1;
+      label{
+          display: inline-block;
+          float: left;
+          height: .66rem;
+          line-height: .66rem;
+          width: 1.5rem;
+          font-size: .3rem;
+          text-align: left;
+          color: #80C6F4;
+      }
+      input{
+          float: left;
+          font-size: .24rem;
+          width: calc(~'100% - 1.5rem');
+        &.qrcode-input{
+          width: calc(~'100% - 2.46rem');
+        }
+      }
+      .login-input-box-code{
+        position: absolute;
+        right: 0;
+        top: 0.2rem;
+        width: 0.96rem;
+        text-align: center;
+        font-size: 0.12rem;
+      }
+      .forget-password{
+        position: absolute;
+        right: 0;
+        top: 0.16rem;
+        font-size: .12rem;
+
+      }
     }
     button{
       border: none;
@@ -85,24 +148,6 @@
       margin: .3rem 0 .2rem 0;
       &:focus{
         outline: none;
-      }
-    }
-    .login-tips{
-      position: relative;
-      width: 60%;
-      height: .5rem;
-      margin: 0 auto;
-      a{
-        position: absolute;
-        color: #fff;
-        font-size: .26rem;
-        text-decoration: none;
-        &:nth-of-type(1){
-          left: .2rem;
-        }
-        &:nth-of-type(2){
-          right: .2rem;
-        }
       }
     }
   }

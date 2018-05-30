@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="login-sign">
-      <img src="../assets/icon/icon-logo.png" alt="">
+      <img src="../assets/icon/icon-logo.svg" alt="">
     </div>
     <form>
       <div class="login-input-box">
@@ -42,8 +42,9 @@
 <script>
   import '../style/login.less'
   import '../style/register.less'
+  import VerifyRule from '../components/verifyRule'
   export default{
-    name:'register',
+    name:'forget-passowrd',
     data () {
       return {
         password:'',
@@ -65,9 +66,18 @@
     },
     methods:{
       submit (){
-        console.log(this.$verify)
-        //TODO 访问忘记密码接口
-//            this.$router.push("/login");
+        var result = VerifyRule([
+          {name:'password',rule:[{type:'required',message:'请输入新密码'}],value:this.password},
+          {name:'confirmPassword',rule:[{type:'required',message:'请确认新密码'},{type:'identical',
+            message:'两次输入密码不同，请重新输入',opt:this.password}],value:this.confirmPassword},
+          {name:'qrcode',rule:[{type:'required',message:'请输入验证码'}],value:this.qrcode},
+        ]);
+        if(result.success){
+          //TODO 访问忘记密码接口
+          this.$router.push("/login");
+        }else{
+          alert(result.message);
+        }
       },
       choiceLanguage (type){
         this.language = type;

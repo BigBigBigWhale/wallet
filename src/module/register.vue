@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="resgist-sign">
-      <img src="../assets/login_title.png" alt="">
+      <img src="../assets/icon/icon-resgist-logo.svg" alt="">
     </div>
     <form>
       <div class="login-input-box">
@@ -53,6 +53,7 @@
 <script>
     import '../style/login.less'
     import '../style/register.less'
+    import VerifyRule from '../components/verifyRule'
     export default{
         name:'register',
         data () {
@@ -79,9 +80,20 @@
       },
       methods:{
         resgister (){
-          console.log(this.$verify)
+          var result = VerifyRule([
+            {name:'username',rule:[{type:'required',message:'请输入昵称'}],value:this.username},
+            {name:'code',rule:[{type:'required',message:'请输入邀请码'}],value:this.code},
+            {name:'phone',rule:[{type:'required',message:'请输入手机号'},{type:'phone'}],value:this.phone},
+            {name:'qrcode',rule:[{type:'required',message:'请输入验证码'}],value:this.qrcode},
+            {name:'password',rule:[{type:'required',message:'请输入密码'}],value:this.password},
+            {name:'confirmPassword',rule:[{type:'required',message:'请再次输入密码'}],value:this.confirmPassword},
+          ]);
+          if(result.success){
           //TODO 上传注册数据
-//            this.$router.push("/login");
+            this.$router.push("/login");
+          }else{
+            alert(result.message);
+          }
         },
         choiceLanguage (type){
           this.language = type;

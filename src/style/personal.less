@@ -1,0 +1,137 @@
+.personal{
+    background-color: #4b5a97;
+    div{
+        box-sizing: border-box;
+    }
+
+    .personal-top{
+        position: relative;
+        width: 100%;
+        height: 2.16rem;
+        background-image: url('../assets/personal-back.jpg');
+        background-size: 100% auto;
+
+        .user-portrai {
+            position: absolute;
+            top: 0.35rem;
+            left: 0.3rem;
+            width: 1.45rem;
+            height: 1.45rem;
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            img{
+                width: 1.45rem;
+                height: 1.45rem;
+            }
+        }
+        .user-name{
+            position: absolute;
+            top:0.8rem;
+            left: 2rem;
+            a{
+                color: #fff;
+            }
+        }
+    }
+    .personal-news{
+        position: relative;
+        display: block;
+        height: .82rem;
+        padding: .1rem .3rem;
+        font-size: 0.3rem;
+        line-height: .62rem;
+        box-sizing: border-box;
+        background-color: #3f4e89;
+        .personal-news-icon{
+            position: absolute;
+            top: 0.2rem;
+            left: .3rem;
+            width: .36rem;
+            height: 0.38rem;
+            background-image: url('../assets/icon/icon-news.png');
+            background-size: 100% auto;
+            span{
+                position: absolute;
+                top: -0.04rem;
+                right: -0.06rem;
+                width: 0.1rem;
+                height: 0.1rem;
+                border-radius: 50%;
+                background-color: red;
+            }
+        }
+        .personal-news-content{
+            padding-left: .6rem;
+            text-align: left;
+        }
+    }
+    .personal-list{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.2rem 0.3rem 0.1rem 0.3rem;
+        .personal-li{
+            position: relative;
+            width: calc(~"33% - 0.12rem");
+            height: 1.5rem;
+            margin: 0.06rem;
+            background-color: #3f4e89;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            .personal-li-icon{
+                width: 0.7rem;
+                height: 0.7rem;
+                background-size: 100%;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+            }
+            .personal-li-name{
+                font-size: 0.24rem;
+                margin-top: 0.1rem;
+            }
+            .personal-li-news{
+                position: absolute;
+                top: 0.1rem;
+                left: 0.26rem;
+                width: 0.44rem;
+                height: 0.42rem;
+                background-size: 100% ;
+                background-repeat: no-repeat;
+                background-image: url('../assets/icon/icon-personal-news.png');
+            }
+
+        }
+
+    }
+    .personal-function{
+        .personal-li{
+            &:nth-of-type(1)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-1.png');}
+            &:nth-of-type(2)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-2.png');}
+            &:nth-of-type(3)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-3.png');}
+            &:nth-of-type(4)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-4.png');}
+            &:nth-of-type(5)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-5.png');}
+            &:nth-of-type(6)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-6.png');}
+            &:nth-of-type(7)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-7.png');}
+            &:nth-of-type(8)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-8.png');}
+            &:nth-of-type(9)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-9.png');}
+        }
+    }
+    .personal-link{
+        .personal-li{
+            &:nth-of-type(1)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-10.png');}
+            &:nth-of-type(2)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-10.png');}
+            &:nth-of-type(3)  .personal-li-icon{background-image: url('../assets/icon/icon-person-li-10.png');}
+        }
+    }
+    .personal-subtitle{
+        text-align: left;
+        padding: 0 0.4rem;
+        font-size: 0.3rem;
+    }
+
+
+
+
+}

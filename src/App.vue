@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <nav class="nav" v-if="hasNav">
-        <span class="nav-back" @click="backBtn()"><img src="./assets/icon/back.svg">返回</span>
-        {{title}}
+        <span class="nav-back" @click="backBtn()" v-if="nav.show"><img src="./assets/icon/back.svg">返回</span>
+        {{nav.title}}
     </nav>
 
-    <router-view/>
+    <router-view class="Children"/>
 
     <footer class="footer" v-if="hasFooter">
         <ul>
           <li :class="footerOpt=='/'?'active':''" @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/wallet.svg" alt="钱包">钱包</router-link></BaseButton></li>
           <li :class="footerOpt=='/price'?'active':''" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/price.svg" alt="行情">行情</router-link></BaseButton></li>
           <li :class="footerOpt=='/trade'?'active':''" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/trade.svg" alt="交易">交易</router-link></BaseButton></li>
-          <li :class="footerOpt=='/personal'?'active':''" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><img src="./assets/icon/personal.svg" alt="我的">我的</router-link></BaseButton></li>
+          <li :class="footerOpt=='/personal'?'active':''" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/personal.svg" alt="我的">我的</router-link></BaseButton></li>
         </ul>
     </footer>
   </div>
@@ -25,8 +25,9 @@ import BaseButton from './components/baseButton'
 import Storage from './components/Storage'
 
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
-var hasNav = {};
-var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true};
+var hasNav = {'/personal':true};
+var noNavBtn = {'/personal':true};
+var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true,'/':true,'/price':true,'/trade':true,'/personal':true};
 export default {
   name: 'App',
   components:{
@@ -34,7 +35,10 @@ export default {
   },
   data:function () {
       return{
-          title:'标题',
+          nav:{
+            title:'',
+            show:true,
+          },
           footerOpt:'wallet',
           hasNav: false,
           hasFooter: false,
@@ -45,7 +49,8 @@ export default {
       this.hasFooter = !!hasFooter[to.path];
       this.hasNav = !!hasNav[to.path];
       this.checkLogin(to.path,from.path);
-      this.checkStatus(to.path);
+      this.checkStatus(to);
+      console.log(to)
 //            console.log('val1',to);
 //            console.log('val2',from);
     }
@@ -56,20 +61,23 @@ export default {
         this.$router.push("/login");
         return;
       }
-      if(!!unwantedLogin[toPath]&&globalDate.user){//登录的跳转到首页
-        if(FromPath){//用于判断从哪个页面来的
-          this.$router.push(FromPath);
-        }else{
-          this.$router.push("/");
-          return;
-        }
-      }
+//      if(!!unwantedLogin[toPath]&&globalDate.user){//登录的跳转到首页
+//        if(FromPath){//用于判断从哪个页面来的
+//          this.$router.push(FromPath);
+//        }else{
+////          this.$router.push("/");
+//        }
+//      }
     },
-    checkStatus (path){
-      this.hasFooter = !!hasFooter[path];
-      this.hasNav = !!hasNav[path];
+    checkStatus (item){
+      this.hasFooter = !!hasFooter[item.path];
+      this.hasNav = !!hasNav[item.path];
       if(this.hasFooter){
-          this.choiceFooterOpt(path);
+          this.choiceFooterOpt(item.path);
+      }
+      if(this.hasNav){
+        this.nav.title = item.name;
+        this.nav.show = !noNavBtn[item.path];
       }
     },
     choiceFooterOpt (opt){//底部导航的选择事件
@@ -86,10 +94,10 @@ export default {
     let storage = new Storage('login', window.localStorage);
     globalDate.user = storage.get('user') || null;
     this.checkLogin(this.$route.path);
-    this.checkStatus(this.$route.path);
+    this.checkStatus(this.$route);
   },
   mounted (){
-      console.log(this.$route.path)
+//      console.log(this.$route.path)
   }
 }
 </script>

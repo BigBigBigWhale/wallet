@@ -9,10 +9,17 @@
 
     <footer class="footer" v-if="hasFooter">
         <ul>
-          <li :class="footerOpt=='/'?'active':''" @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/wallet.svg" alt="钱包">钱包</router-link></BaseButton></li>
-          <li :class="footerOpt=='/price'?'active':''" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/price.svg" alt="行情">行情</router-link></BaseButton></li>
-          <li :class="footerOpt=='/trade'?'active':''" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/trade.svg" alt="交易">交易</router-link></BaseButton></li>
-          <li :class="footerOpt=='/personal'?'active':''" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/personal.svg" alt="我的">我的</router-link></BaseButton></li>
+          <li v-if="footerOpt=='/'" class="active" @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/icon-wallet-actv.png" alt="钱包">钱包</router-link></BaseButton></li>
+          <li v-else @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/icon-wallet.png" alt="钱包">钱包</router-link></BaseButton></li>
+
+            <li v-if="footerOpt=='/price'" class="active" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price-actv.png" alt="行情">行情</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price.png" alt="行情">行情</router-link></BaseButton></li>
+
+          <li v-if="footerOpt=='/trade'" class="active" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade-actv.png" alt="交易">交易</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade.png" alt="交易">交易</router-link></BaseButton></li>
+
+          <li v-if="footerOpt=='/personal'" class="active" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/icon-user-actv.png" alt="我的">我的</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/icon-user.png" alt="我的">我的</router-link></BaseButton></li>
         </ul>
     </footer>
   </div>
@@ -20,6 +27,7 @@
 
 <script>
 import './style/app.less'
+import './style/default.less'
 import globalDate from './router/globalDate'
 import BaseButton from './components/baseButton'
 import Storage from './components/Storage'

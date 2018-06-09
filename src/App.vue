@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="nav" v-if="hasNav">
-        <span class="nav-back" @click="backBtn()" v-if="nav.show"><img src="./assets/icon/back.svg">返回</span>
+        <span class="nav-back" @click="backBtn()" v-if="nav.show"><img src="static/images/icon/back.svg">返回</span>
         {{nav.title}}
     </nav>
 
@@ -9,17 +9,17 @@
 
     <footer class="footer" v-if="hasFooter">
         <ul>
-          <li v-if="footerOpt=='/'" class="active" @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/icon-wallet-actv.png" alt="钱包">钱包</router-link></BaseButton></li>
-          <li v-else @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="./assets/icon/icon-wallet.png" alt="钱包">钱包</router-link></BaseButton></li>
+          <li v-if="footerOpt=='/'" class="active" @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="static/images/icon/icon-wallet-actv.png" alt="钱包">钱包</router-link></BaseButton></li>
+          <li v-else @click="choiceFooterOpt('/')"><BaseButton><router-link to="/"><img src="static/images/icon/icon-wallet.png" alt="钱包">钱包</router-link></BaseButton></li>
 
-            <li v-if="footerOpt=='/price'" class="active" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price-actv.png" alt="行情">行情</router-link></BaseButton></li>
-          <li v-else class="" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price.png" alt="行情">行情</router-link></BaseButton></li>
+            <li v-if="footerOpt=='/price'" class="active" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="static/images/icon/icon-price-actv.png" alt="行情">行情</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="static/images/icon/icon-price.png" alt="行情">行情</router-link></BaseButton></li>
 
-          <li v-if="footerOpt=='/trade'" class="active" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade-actv.png" alt="交易">交易</router-link></BaseButton></li>
-          <li v-else class="" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade.png" alt="交易">交易</router-link></BaseButton></li>
+          <li v-if="footerOpt=='/trade'" class="active" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="static/images/icon/icon-trade-actv.png" alt="交易">交易</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="static/images/icon/icon-trade.png" alt="交易">交易</router-link></BaseButton></li>
 
-          <li v-if="footerOpt=='/personal'" class="active" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/icon-user-actv.png" alt="我的">我的</router-link></BaseButton></li>
-          <li v-else class="" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/icon-user.png" alt="我的">我的</router-link></BaseButton></li>
+          <li v-if="footerOpt=='/personal'" class="active" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="static/images/icon/icon-user-actv.png" alt="我的">我的</router-link></BaseButton></li>
+          <li v-else class="" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="static/images/icon/icon-user.png" alt="我的">我的</router-link></BaseButton></li>
         </ul>
     </footer>
   </div>
@@ -29,7 +29,7 @@
 import './style/app.less'
 import './style/default.less'
 import globalDate from './router/globalDate'
-import BaseButton from './components/baseButton'
+import BaseButton from './components/baseButtonCpt'
 import Storage from './components/Storage'
 
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};

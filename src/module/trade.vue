@@ -1,9 +1,9 @@
 <template>
   <div class="trade">
     <div class="trade-nav">
-      <span class="trade-nav-left"><img src="../assets/icon/icon-trade-right.png"></span>
+      <span class="trade-nav-left"><img src="/static/images/icon/icon-trade-right.png"></span>
       交易
-      <span class="trade-nav-right"><img src="../assets/icon/icon-add.png"></span>
+      <span class="trade-nav-right"><img src="/static/images/icon/icon-add.png"></span>
     </div>
     <div class="trade-top">
        <div class="trade-logo"></div>

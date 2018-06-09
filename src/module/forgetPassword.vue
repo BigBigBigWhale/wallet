@@ -6,18 +6,18 @@
       </div>
       忘记密码
       <div class="language" @click="isChoiceLanguage=!isChoiceLanguage">
-        <img src="../assets/icon/icon-china.png" alt="" v-if="language=='zh'">
+        <img src="static/images/icon/icon-china.png" alt="" v-if="language=='zh'">
         <img src="" alt="" v-else>
         <div class="language-opt" v-if="isChoiceLanguage">
           <ul>
-            <li @click="choiceLanguage('zh')">中文 <img src="../assets/icon/icon-china.png" alt=""></li>
-            <li @click="choiceLanguage('en')">英语 <img src="../assets/icon/icon-china.png" alt=""></li>
+            <li @click="choiceLanguage('zh')">中文 <img src="static/images/icon/icon-china.png" alt=""></li>
+            <li @click="choiceLanguage('en')">英语 <img src="static/images/icon/icon-china.png" alt=""></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="login-sign">
-      <img src="../assets/icon/icon_logo.svg" alt="">
+      <img src="static/images/icon/icon_logo.svg" alt="">
     </div>
     <form>
       <div class="login-input-box">

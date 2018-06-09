@@ -7,7 +7,7 @@
         <ul>
             <div class="price-li" v-for="(item,index) in list">
                 <li @click="openEcharts(item)">
-                    <div class="price-li-name"><img src="../assets/icon/icon-person-li-1.png" alt="">EOS</div>
+                    <div class="price-li-name"><img src="static/images/icon/icon-person-li-1.png" alt="">EOS</div>
                     <div class="price-li-value" :class="{'price-li-value-red':!item.state}">
                         <div class="price-li-value-left">
                             <div class="price-li-value-left-l">
@@ -28,7 +28,7 @@
             </div>
 
           <!--<li>-->
-            <!--<div class="price-li-name"><img src="../assets/icon/icon-person-li-1.png" alt="">EOS</div>-->
+            <!--<div class="price-li-name"><img src="../images/icon/icon-person-li-1.png" alt="">EOS</div>-->
             <!--<div class="price-li-value price-li-value-red">-->
               <!--<div class="price-li-value-left">-->
                 <!--<div class="price-li-value-left-l">-->
@@ -50,7 +50,7 @@
   import '../style/price.less'
   let echarts = require('echarts/lib/echarts');
   require('echarts/lib/chart/line');
-  import lb from '../components/LB.vue'
+  import lb from '../components/LBCpt.vue'
     export default{
         name: 'Price',
         components:{

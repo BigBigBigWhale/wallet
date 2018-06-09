@@ -1,15 +1,7 @@
 <template>
   <div class="price">
       <div class="price-top">
-          <div class="price-lb">
-              <ul class="price-lb-list">
-                  <li class="price-lb-li">手</li>
-                  <li class="price-lb-li">写</li>
-                  <li class="price-lb-li">轮</li>
-                  <li class="price-lb-li">播</li>
-                  <li class="price-lb-li">图</li>
-              </ul>
-          </div>
+          <lb @lookDetail="lookDetail" :list="lunboList"></lb>
       </div>
     <div class="price-list">
         <ul>
@@ -56,11 +48,14 @@
 
 <script>
   import '../style/price.less'
-  import $ from 'jquery'
   let echarts = require('echarts/lib/echarts');
   require('echarts/lib/chart/line');
+  import lb from '../components/LB.vue'
     export default{
         name: 'Price',
+        components:{
+            lb
+        },
         data: function () {
             return {
                 list:[{
@@ -69,15 +64,21 @@
                 },{
                     state:false,
                     open:true,
-                }]
+                }],
+                lunboList:[],//用于存放头部导航轮播图片
+
             }
         },
         methods:{
             openEcharts(item){
                 item.open = !item.open;
             },
-            createEcharts (id){
-                console.log(id)
+            lookDetail (){
+                console.log('2')
+            },
+            createEcharts (id,colorState){
+                let color = colorState?'#369f81':'#f2183d';
+                let shadowColor = colorState?['#205066','#24334e']:['#611b42','#391f3c'];
                 let myChart = echarts.init(document.getElementById(id));
                 let option = {
                     tooltip: {
@@ -93,7 +94,7 @@
                         show:false
                     },
                     lineStyle:{
-                        color:'#369f81'
+                        color: color,
                     },
                     itemStyle:{
 
@@ -180,10 +181,10 @@
                                 normal: {
                                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                         offset: 0,
-                                        color: 'rgb(49 , 80, 109)'
+                                        color: shadowColor[0]
                                     }, {
                                         offset: 1,
-                                        color: 'rgb(50, 53, 94)'
+                                        color: shadowColor[1]
                                     }])
                                 }
                             },
@@ -196,7 +197,7 @@
         },
         mounted(){
             for(let i in this.list){
-                this.createEcharts('echarts-'+i);
+                this.createEcharts('echarts-'+i,this.list[i].state);
                 this.list[i].open = false;
             }
         }

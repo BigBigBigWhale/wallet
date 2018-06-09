@@ -23,7 +23,7 @@
                 <div class="price-li-box" v-show="item.open">
                     <div class="price-li-box-top"><span>最高价  24.3523</span><span>最低价  24.3523</span></div>
                     <div class="price-li-echarts" :id="'echarts-'+index" style="width: 100%;height: 4rem;"></div>
-                    <div class="price-li-box-btn"><button>去交易</button></div>
+                    <div class="price-li-box-btn"><router-link :to="'/price-detail?id='+'1'">去交易</router-link></div>
                 </div>
             </div>
 

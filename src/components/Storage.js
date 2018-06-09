@@ -1,6 +1,3 @@
-/**
- * Created by linyh on 2017/10/16
- */
 function parseDate(timeStr) {
     if (typeof timeStr === 'undefined') {
         // 时间字符串

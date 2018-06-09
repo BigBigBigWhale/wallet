@@ -1,6 +1,3 @@
-/**
- * Created by 15755 on 2018/5/28.
- */
 //todo 优化目标封装成vue组件，达成实时监控,可以将规则里的验证函数构造一个原型对象
 let rule = {
   required (val,mag){

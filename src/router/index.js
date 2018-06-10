@@ -8,6 +8,13 @@ import Personal from '../module/personal'
 import Login from '../module/login'
 import Register from '../module/register'
 import ForgetPassword from '../module/forgetPassword'
+import Notice from '../module/notice'
+import CusService from '../module/cusService'
+import Record from '../module/record'
+import VersionUpdate from '../module/versionUpdate'
+import Company from '../module/company'
+import Agreement from '../module/agreement'
+import SetUp from '../module/setUp'
 Vue.use(Router);
 
 var router = new Router({
@@ -52,6 +59,41 @@ var router = new Router({
       name: '忘记密码',
       component: ForgetPassword
     },
+    {
+      path: '/notice',
+      name: '官方公告',
+      component: Notice
+    },
+    {
+      path: '/cusService',
+      name: '客服',
+      component: CusService
+    },
+    {
+      path: '/record',
+      name: '反馈记录',
+      component: Record
+    },
+    {
+      path: '/versionUpdate',
+      name: '版本更新',
+      component: VersionUpdate
+    },
+    {
+      path: '/company',
+      name: '版本更新',
+      component: Company
+    },
+    {
+      path: '/agreement',
+      name: '协议声明',
+      component: Agreement
+    },
+    {
+      path: '/setUp',
+      name: '设置中心',
+      component: SetUp
+    }
   ],
 });
 export default router;

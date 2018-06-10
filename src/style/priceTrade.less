@@ -1,0 +1,139 @@
+.priceTrade{
+	@green: #21ce57;
+	@red: #fb3030;
+	.pt-top{
+		background-color: #222c52;
+		.pt-t-desc{
+			height: 0.9rem;
+			color: #fff;
+			text-align: left;
+			font-size: 0.3rem;
+			padding: 0.2rem 0.4rem;
+			.big-font{
+				font-size: 0.4rem;
+			}
+			.green{
+				color: @green;
+			}
+		}
+		.pt-t-content{
+			height: 2.6rem;
+			border-top: 0.01rem solid #2e3a67;
+			display: flex;
+			.pt-t-c-part{
+				width: 50%;
+				font-size: 0.3rem;
+				padding: 0.3rem;
+				color: #fff;
+				&:nth-of-type(1){
+					border-right: 0.01rem solid #2e3a67;
+				}
+				&>div{
+					height: 0.4rem;
+					&.red{
+						.module-1{
+							color: @red;
+							text-align: right;
+						}
+						.module-2{
+							color: @red;
+							text-align: right;
+						}
+						.module-3{
+							text-align: left;
+						}
+					}
+					span{
+						display: inline-block;
+					}
+					.module-1{
+						width: 20%;
+						color: @green;
+						text-align: left;
+					}
+					.module-2{
+						width: 30%;
+						color: @green;
+						text-align: left;
+					}
+					.module-3{
+						width: 50%;
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+	.pt-content{
+		padding: 0.3rem;
+		@color:#5e76d1;
+		.pt-c-title{
+			height: 0.4rem;
+			line-height: 0.4rem;
+			color: @green;
+			text-align: left;
+			letter-spacing: 0.02rem;
+			margin-bottom: 0.1rem;
+		}
+		.pt-c-num{
+			text-align: left;
+			color:@color;
+			letter-spacing: 0.04rem;
+			height: 0.4rem;
+			line-height: 0.4rem;
+			margin-bottom: 0.1rem;
+		}
+		.pt-c-input{
+			display: flex;
+			justify-content: space-between;
+			&>div{
+				width: 49%;
+				.pt-c-style{
+					display: flex;
+					text-align: left;
+					justify-content: space-between;
+					padding: 0 0.2rem;
+					color: @color;
+					font-size: 0.24rem;
+					height: 0.5rem;
+					align-items: center;
+					span{
+						color: #fff;
+					}
+				}
+				.pt-c-btn{
+					height: 0.8rem;
+					line-height: 0.8rem;
+					border-radius: 0.08rem;
+					background-color: @green;
+					margin: 0.2rem 0;
+					&.pt-c-btn-default{
+						background-color: #3f4e89;
+					}
+				}
+				input{
+					width: 100%;
+					color: @color;
+					height: 0.5rem;
+					padding: 0 0.3rem;
+					box-sizing: border-box;
+					caret-color:@color;
+					border: 0.01rem solid #5473ec;
+					border-radius: 0.06rem;
+					background-color: transparent;
+					&:focus{
+						outline: none;
+					}
+				}
+			}
+
+			::-webkit-input-placeholder { /* WebKit browsers */color: @color;}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */color: @color;}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */color: @color;}
+			:-ms-input-placeholder { /* Internet Explorer 10+ */color: @color;}
+		}
+
+	}
+
+
+}

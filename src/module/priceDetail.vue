@@ -14,7 +14,7 @@
             <div class="priceDetail-echarts-text">MOUNTAIN TREND</div>
             <div id="echarts-b"  style="width: 100%;height: 6rem;"></div>
         </div>
-        <div class="priceDetail-btn"><router-link to="/">买入</router-link><router-link to="/">卖出</router-link></div>
+        <div class="priceDetail-btn"><router-link to="/">买入</router-link><router-link to="/price-trade">卖出</router-link></div>
     </div>
 </template>
 

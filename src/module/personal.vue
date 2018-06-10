@@ -1,7 +1,7 @@
 <template>
   <div class="personal">
       <div class="personal-top">
-          <div class="user-portrai"><img src="/static/images/default-head-portrait.png" alt=""></div>
+          <div class="user-portrai"><img src="../assets/images/default-head-portrait.png" alt=""></div>
           <div class="user-name"><router-link to="/login">登陆</router-link> / <router-link to="/register">注册</router-link></div>
       </div>
       <router-link to="/" class="personal-news">

@@ -1,17 +1,99 @@
 .purchaseArea{
+	.li-content-text-money{
+		color: #fb3030;
+	}
+	.li-content-text{
+		button{
+			background-color: #fe4b4b;
+		}
+	}
+}
+.sellingArea{
+	.li-content-text-money{
+		color: #21f358;
+	}
+	.li-content-text{
+		button{
+			background-color: #2bf35f;
+		}
+	}
+}
+.purchaseSelling{
 	min-height: 100%;
 	background-color: #fff;
 	padding: 0.16rem 0.3rem;
-	.purchaseArea-li{
+	.pcSeA-li{
 		width: 100%;
 		min-height:2.5rem;
 		background-color: #eaeaea;
 		border-radius: 0.1rem;
 		box-shadow: 0 0.04rem 0.08rem 0.04rem #ccc;
 		overflow: hidden;
-		.purchaseArea-li-title{
+		.pcSeA-li-title{
+			position: relative;
 			height: 0.6rem;
 			background-color: #5868ac;
+			padding-left: 1.35rem;
+			text-align: left;
+			line-height: 0.6rem;
+			font-size: 0.26rem;
+			&>div{
+				position: absolute;
+				right: 0;
+				top: 0;
+				span{
+					margin-right: 0.2rem;
+				}
+			}
+		}
+		.pcSeA-li-content{
+			position: relative;
+			padding: 0.2rem 0.2rem 0.2rem 1.35rem;
+			img{
+				position: absolute;
+				left: 0.22rem;
+				top: 0.4rem;
+				width: 0.9rem;
+				height: 0.9rem;
+				border-radius: 50%;
+			}
+			.li-content-text{
+				color: #000;
+				font-size: 0.26rem;
+				div{
+					height: 0.4rem;
+					line-height: 0.4rem;
+					text-align: left;
+				}
+				.li-content-text-desc{
+					.light-font{
+						color: #999;
+					}
+				}
+				.li-content-text-sub{
+					padding-left: 0.64rem;
+				}
+				.li-content-text-money{
+					font-size: 0.34rem;
+					margin-bottom: 0.16rem;
+				}
+				.li-content-text-card{
+					span{
+						margin-right: 0.2rem;
+					}
+				}
+				button{
+					position: absolute;
+					bottom: 0.1rem;
+					right: 0.2rem;
+					border: none;
+					width: 1.4rem;
+					height: 0.6rem;
+					color: #fff;
+					border-radius: 0.1rem;
+				}
+			}
+
 		}
 	}
 }

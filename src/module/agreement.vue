@@ -21,4 +21,17 @@
 
 <script>
   import '../style/company.less'
+  export default{
+    data (){
+      return{
+
+      }
+    },
+    methods :{
+
+    },
+    mounted(){
+
+    }
+  }
 </script>

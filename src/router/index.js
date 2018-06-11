@@ -6,6 +6,7 @@ import PriceDetail from '../module/priceDetail'
 import PriceTrade from '../module/priceTrade'
 import Trade from '../module/trade'
 import PurchaseArea from '../module/purchaseArea'
+import SellingArea from '../module/sellingArea'
 import Personal from '../module/personal'
 import Login from '../module/login'
 import Register from '../module/register'
@@ -51,6 +52,11 @@ var router = new Router({
       path: '/trade/purchase-area',
       name: '购买',
       component: PurchaseArea
+    },
+    {
+      path: '/trade/selling-area',
+      name: '出售',
+      component: SellingArea
     },
     {
       path: '/personal',

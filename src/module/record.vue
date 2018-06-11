@@ -29,4 +29,17 @@
 
 <script>
   import '../style/cusService.less'
+  export default{
+    data (){
+      return{
+
+      }
+    },
+    methods :{
+
+    },
+    mounted(){
+
+    }
+  }
 </script>

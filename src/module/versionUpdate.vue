@@ -12,4 +12,17 @@
 
 <script>
     import '../style/versionUpdate.less'
+    export default{
+      data (){
+        return{
+
+        }
+      },
+      methods :{
+
+      },
+      mounted(){
+
+      }
+    }
 </script>

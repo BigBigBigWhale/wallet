@@ -20,5 +20,17 @@
 
 <script>
   import '../style/notice.less'
+  export default{
+    data (){
+      return{
 
+      }
+    },
+    methods :{
+
+    },
+    mounted(){
+
+    }
+  }
 </script>

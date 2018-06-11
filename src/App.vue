@@ -33,7 +33,7 @@ import BaseButton from './components/baseButtonCpt'
 import Storage from './components/Storage'
 
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
-var hasNav = {'/personal':true,'/trade/purchase-area':true,'/personal/agreement':true,'/personal/company':true,'/personal/notice':true,'/personal/record':true,'/personal/setUp':true,'/personal/versionUpdate':true,'/personal/safeCenter':true,};
+var hasNav = {'/personal':true,'/trade/purchase-area':true,'/trade/selling-area':true,'/personal/agreement':true,'/personal/company':true,'/personal/notice':true,'/personal/record':true,'/personal/setUp':true,'/personal/versionUpdate':true,'/personal/safeCenter':true,};
 var noNavBtn = {'/personal':true};
 var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true,'/':true,'/price':true,'/trade':true,'/personal':true};
 export default {

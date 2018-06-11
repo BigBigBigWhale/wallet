@@ -13,4 +13,17 @@
 
 <script>
   import '../style/setUp.less'
+  export default{
+    data (){
+      return{
+
+      }
+    },
+    methods :{
+
+    },
+    mounted(){
+
+    }
+  }
 </script>

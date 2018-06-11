@@ -19,7 +19,7 @@
       </div>
       <div class="trade-btn-box">
           <button class="trade-btn trade-btn-buy" @click="goPurchase()">买入</button>
-          <button class="trade-btn trade-btn-sell">卖出</button>
+          <button class="trade-btn trade-btn-sell" @click="goSelling()">卖出</button>
       </div>
   </div>
 </template>
@@ -36,7 +36,10 @@
         methods:{
             goPurchase (){
                 this.$router.push('/trade/purchase-area');
-            }
+            },
+            goSelling (){
+                this.$router.push('/trade/selling-area');
+            },
         },
         mounted (){
             let myChart = echarts.init(document.getElementById('myChart'));

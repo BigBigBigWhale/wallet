@@ -13,18 +13,18 @@
 <script>
     import '../style/topNavCpt.less'
     let list = [
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'},
-            {imgUrl:'/static/images/icon/icon-bit.png',value:'BIT/EC'}
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'},
+            {imgUrl:'static/images/icon/icon-bit.png',value:'BIT/EC'}
             ];
     export default{
         data: function () {

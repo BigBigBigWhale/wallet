@@ -1,9 +1,9 @@
 <template>
     <div id="LB">
         <ul id="imgs" :style="{width:totalLength+'px',left:-(index*singleLength)+'px'}">
-            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="/static/images/home-back.png" alt=""/></li>
-            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="/static/images/default-head-portrait.png" alt=""/></li>
-            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="/static/images/home-back.png" alt=""/></li>
+            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="../assets/images/home-back.png" alt=""/></li>
+            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="../assets/images/default-head-portrait.png" alt=""/></li>
+            <li :style="{width: singleLength+'px'}" @click="lookDetail()"><img src="../assets/images/home-back.png" alt=""/></li>
         </ul>
         <ol>
             <li :class="{'li-active':(index==0)}" @click="goIndex(0)"></li>

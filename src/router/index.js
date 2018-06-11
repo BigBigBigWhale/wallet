@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Wallet from '../module/wallet'
 import Price from '../module/price'
 import PriceDetail from '../module/priceDetail'
+import PriceTrade from '../module/priceTrade'
 import Trade from '../module/trade'
 import Personal from '../module/personal'
 import Login from '../module/login'
@@ -26,6 +27,11 @@ var router = new Router({
       path: '/price-detail',
       name: '详情',
       component: PriceDetail
+    },
+    {
+      path: '/price-trade',
+      name: '交易',
+      component: PriceTrade
     },
     {
       path: '/trade',

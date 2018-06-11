@@ -9,6 +9,14 @@ import Personal from '../module/personal'
 import Login from '../module/login'
 import Register from '../module/register'
 import ForgetPassword from '../module/forgetPassword'
+import Agreement from '../module/agreement'//协议
+import Company from '../module/company'//公司简介
+import CusService from '../module/cusService'//客服
+import Notice from '../module/notice'//公告
+import Record from '../module/record'//反馈记录
+import SetUp from '../module/setUp'//设置
+import VersionUpdate from '../module/versionUpdate'//版本更新
+import SafeCenter from '../module/safeCenter'//安全中心
 Vue.use(Router);
 
 var router = new Router({
@@ -57,6 +65,46 @@ var router = new Router({
       path: '/forget-password',
       name: '忘记密码',
       component: ForgetPassword
+    },
+    {
+      path: '/agreement',
+      name: '协议声明',
+      component: Agreement
+    },
+    {
+      path: '/company',
+      name: '公司简介',
+      component: Company
+    },
+    {
+      path: '/cusService',
+      name: '客服',
+      component: CusService
+    },
+    {
+      path: '/notice',
+      name: '公告',
+      component: Notice
+    },
+    {
+      path: '/record',
+      name: '反馈记录',
+      component: Record
+    },
+    {
+      path: '/setUp',
+      name: '设置中心',
+      component: SetUp
+    },
+    {
+      path: '/versionUpdate',
+      name: '版本更新',
+      component: VersionUpdate
+    },
+    {
+      path: '/safeCenter',
+      name: '安全中心',
+      component: SafeCenter
     },
   ],
 });

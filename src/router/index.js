@@ -5,6 +5,7 @@ import Price from '../module/price'
 import PriceDetail from '../module/priceDetail'
 import PriceTrade from '../module/priceTrade'
 import Trade from '../module/trade'
+import PurchaseArea from '../module/purchaseArea'
 import Personal from '../module/personal'
 import Login from '../module/login'
 import Register from '../module/register'
@@ -47,6 +48,11 @@ var router = new Router({
       component: Trade
     },
     {
+      path: '/trade/purchase-area',
+      name: '购买',
+      component: PurchaseArea
+    },
+    {
       path: '/personal',
       name: '我的',
       component: Personal
@@ -67,42 +73,42 @@ var router = new Router({
       component: ForgetPassword
     },
     {
-      path: '/agreement',
+      path: '/personal/agreement',
       name: '协议声明',
       component: Agreement
     },
     {
-      path: '/company',
+      path: '/personal/company',
       name: '公司简介',
       component: Company
     },
     {
-      path: '/cusService',
+      path: '/personal/cusService',
       name: '客服',
       component: CusService
     },
     {
-      path: '/notice',
-      name: '公告',
+      path: '/personal/notice',
+      name: '官方公告',
       component: Notice
     },
     {
-      path: '/record',
+      path: '/personal/record',
       name: '反馈记录',
       component: Record
     },
     {
-      path: '/setUp',
+      path: '/personal/setUp',
       name: '设置中心',
       component: SetUp
     },
     {
-      path: '/versionUpdate',
+      path: '/personal/versionUpdate',
       name: '版本更新',
       component: VersionUpdate
     },
     {
-      path: '/safeCenter',
+      path: '/personal/safeCenter',
       name: '安全中心',
       component: SafeCenter
     },

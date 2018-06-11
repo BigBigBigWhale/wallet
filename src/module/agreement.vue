@@ -1,9 +1,5 @@
 <template>
-  <div class="trade company">
-    <div class="trade-nav">
-      <span class="trade-nav-left"><img src="/static/images/icon/icon-back.png" alt=""/>杩斿洖</span>
-      协议声明
-    </div>
+  <div class="company">
     <img class="logo" src="/static/images/icon/logo.png" alt=""/>
     <ul class="tabBtn clearfix">
       <li class="active"><a href="#">法律声明</a></li>

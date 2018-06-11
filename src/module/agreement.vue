@@ -1,6 +1,6 @@
 <template>
   <div class="company">
-    <img class="logo" src="/static/images/icon/logo.png" alt=""/>
+    <img class="logo" src="/src/assets/icon/logo.png" alt=""/>
     <ul class="tabBtn clearfix">
       <li class="active"><a href="#">法律声明</a></li>
       <li><a href="#">隐私条款</a></li>

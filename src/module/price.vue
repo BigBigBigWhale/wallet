@@ -7,7 +7,7 @@
         <ul>
             <div class="price-li" v-for="(item,index) in list">
                 <li @click="openEcharts(item)">
-                    <div class="price-li-name"><img src="static/images/icon/icon-person-li-1.png" alt="">EOS</div>
+                    <div class="price-li-name"><img src="../assets/icon/icon-person-li-1.png" alt="">EOS</div>
                     <div class="price-li-value" :class="{'price-li-value-red':!item.state}">
                         <div class="price-li-value-left">
                             <div class="price-li-value-left-l">

@@ -1,7 +1,7 @@
 <template>
   <div class="trade cusService">
     <div class="trade-nav">
-      <span class="trade-nav-left" @click="backBtn()"><img src="/static/images/icon/icon-back.png" alt=""/>返回</span>
+      <span class="trade-nav-left" @click="backBtn()"><img src="../assets/icon/icon-back.png" alt=""/>返回</span>
       客服
       <router-link to="/personal/record"><span class="trade-nav-right">反馈记录</span></router-link>
     </div>

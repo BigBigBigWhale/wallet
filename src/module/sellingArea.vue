@@ -10,7 +10,7 @@
                     <div class="li-content-text-desc"><span class="light-font">出售&nbsp;</span> 5000.00 ETH.E <span class="light-font">限额 </span>&nbsp;100-5000 CNY</div>
                     <div class="li-content-text-sub li-content-text-money">￥67.63</div>
                     <div class="li-content-text-sub li-content-text-card"><span>支付宝</span><span>微信</span><span>银行卡</span></div>
-                    <button>确认购买</button>
+                    <button @click="selling()">确认出售</button>
                 </div>
             </div>
         </div>
@@ -23,7 +23,11 @@
         data: function () {
             return {}
         },
-        methods: {},
+        methods: {
+            selling (){
+                this.$router.push('/trade/selling');
+            }
+        },
         mounted (){
         }
     }

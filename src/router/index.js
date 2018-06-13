@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Wallet from '../module/wallet'
-import Price from '../module/price'
-import PriceDetail from '../module/priceDetail'
-import PriceTrade from '../module/priceTrade'
-import Trade from '../module/trade'
-import PurchaseArea from '../module/purchaseArea'
-import SellingArea from '../module/sellingArea'
-import Personal from '../module/personal'
-import Login from '../module/login'
-import Register from '../module/register'
-import ForgetPassword from '../module/forgetPassword'
+import Wallet from '../module/wallet'//钱包
+import Price from '../module/price'//行情
+import PriceDetail from '../module/priceDetail'//行情详情
+import PriceTrade from '../module/priceTrade'//
+import Trade from '../module/trade'//交易
+import PurchaseArea from '../module/purchaseArea'//买单区
+import SellingArea from '../module/sellingArea'//卖单区
+import Purchase from '../module/purchase'//买单
+import Selling from '../module/selling'//卖单
+import Payment from '../module/payment'//付款聊天
+import PaymentSeller from '../module/paymentSeller'//付款聊天-卖家版
+import Personal from '../module/personal'//我的
+import Login from '../module/login'//登录
+import Register from '../module/register'//注册
+import ForgetPassword from '../module/forgetPassword'//忘记密码
 import Agreement from '../module/agreement'//协议
 import Company from '../module/company'//公司简介
 import CusService from '../module/cusService'//客服
@@ -57,6 +61,26 @@ var router = new Router({
       path: '/trade/selling-area',
       name: '出售',
       component: SellingArea
+    },
+    {
+      path: '/trade/purchase',
+      name: '购买',
+      component: Purchase
+    },
+    {
+      path: '/trade/selling',
+      name: '出售',
+      component: Selling
+    },
+    {
+      path: '/trade/pay',
+      name: '购买',
+      component: Payment
+    },
+    {
+      path: '/trade/pay-seller',
+      name: '出售',
+      component: PaymentSeller
     },
     {
       path: '/personal',

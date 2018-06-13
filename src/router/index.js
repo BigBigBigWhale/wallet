@@ -5,6 +5,8 @@ import Price from '../module/price'//行情
 import PriceDetail from '../module/priceDetail'//行情详情
 import PriceTrade from '../module/priceTrade'//
 import Trade from '../module/trade'//交易
+import Trade2 from '../module/trade2'//交易2
+import ReleaseTrade from '../module/releaseTrade'//交易2
 import PurchaseArea from '../module/purchaseArea'//买单区
 import SellingArea from '../module/sellingArea'//卖单区
 import Purchase from '../module/purchase'//买单
@@ -58,6 +60,16 @@ var router = new Router({
       path: '/trade',
       name: '交易',
       component: Trade
+    },
+    {
+      path: '/trade2',
+      name: '交易2',
+      component: Trade2
+    },
+    {
+      path: '/trade2/releaseTrade',
+      name: '发布广告',
+      component: ReleaseTrade
     },
     {
       path: '/trade/purchase-area',

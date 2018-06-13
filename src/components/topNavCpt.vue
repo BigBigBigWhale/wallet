@@ -41,13 +41,19 @@
         data: function () {
             return {
                 title:'EOS',
-                backShow:true,
-                addShow:false,
                 sideDown:{
                     show:false,
                     value:'',
                     list:list,
                 },
+            }
+        },
+        props:{
+            backShow:{
+                default:true,
+            },
+            addShow:{
+                default:false,
             }
         },
         watch:{
@@ -71,7 +77,7 @@
                 this.sideDown.show = !this.sideDown.show;
             },
             add(){
-
+                this.$emit('add');
             },
             choice(){
 

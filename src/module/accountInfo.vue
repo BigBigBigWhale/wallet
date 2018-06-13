@@ -1,12 +1,12 @@
 <template>
   <div class="setUp">
     <ul class="setUpbox clearfix">
-      <li><router-link to="/">修改信息</router-link></li>
-      <li><router-link to="/">手机号</router-link></li>
-      <li><router-link to="/">邮箱验证</router-link></li>
-      <li class="m34"><router-link to="/personal/company">公司简介</router-link></li>
-      <li><router-link to="/personal/agreement">协议声明</router-link></li>
-      <li class="m34"><router-link to="/personal/versionUpdate">版本更新</router-link></li>
+      <li class="liTitle"><router-link to="/">我的广告</router-link></li>
+      <li><router-link to="/">购买广告</router-link></li>
+      <li><router-link to="/">出售广告</router-link></li>
+      <li class="liTitle" ><router-link to="/">完成订单</router-link></li>
+      <li><router-link to="/">已购买订单</router-link></li>
+      <li><router-link to="/">已出售订单</router-link></li>
     </ul>
   </div>
 </template>

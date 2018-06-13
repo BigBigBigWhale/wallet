@@ -32,6 +32,7 @@ import EditPhone from '../module/editPhone'//修改手机号
 import BindingPhone from '../module/bindingPhone'//绑定手机号
 import EditEmail from '../module/editEmail'//修改邮箱
 import BindingEmail from '../module/bindingEmail'//绑定邮箱
+import AccountInfo from '../module/accountInfo'//账户信息
 Vue.use(Router);
 
 var router = new Router({
@@ -195,6 +196,11 @@ var router = new Router({
       path: '/personal/bindingEmail',
       name: '邮箱',
       component: BindingEmail
+    },
+    {
+      path: '/personal/accountInfo',
+      name: '账户信息',
+      component: AccountInfo
     }
   ]
 });

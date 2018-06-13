@@ -23,6 +23,13 @@ import Record from '../module/record'//反馈记录
 import SetUp from '../module/setUp'//设置
 import VersionUpdate from '../module/versionUpdate'//版本更新
 import SafeCenter from '../module/safeCenter'//安全中心
+import LoginEditpwd from '../module/loginEditpwd'//登录密码设置
+import GoogleCode from '../module/googleCode'//谷歌验证设置
+import CapitalEditpwd from '../module/capitalEditpwd'//资金密码设置
+import EditPhone from '../module/editPhone'//修改手机号
+import BindingPhone from '../module/bindingPhone'//绑定手机号
+import EditEmail from '../module/editEmail'//修改邮箱
+import BindingEmail from '../module/bindingEmail'//绑定邮箱
 Vue.use(Router);
 
 var router = new Router({
@@ -142,6 +149,41 @@ var router = new Router({
       name: '安全中心',
       component: SafeCenter
     },
-  ],
+    {
+      path: '/personal/loginEditpwd',
+      name: '登录密码设置',
+      component: LoginEditpwd
+    },
+    {
+      path: '/personal/googleCode',
+      name: '谷歌验证设置',
+      component: GoogleCode
+    },
+    {
+      path: '/personal/capitalEditpwd',
+      name: '资金密码设置',
+      component: CapitalEditpwd
+    },
+    {
+      path: '/personal/editPhone',
+      name: '手机号',
+      component: EditPhone
+    },
+    {
+      path: '/personal/bindingPhone',
+      name: '手机号',
+      component: BindingPhone
+    },
+    {
+      path: '/personal/editEmail',
+      name: '邮箱',
+      component: EditEmail
+    },
+    {
+      path: '/personal/bindingEmail',
+      name: '邮箱',
+      component: BindingEmail
+    }
+  ]
 });
 export default router;

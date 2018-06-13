@@ -35,7 +35,8 @@ import Storage from './components/Storage'
 var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
 var hasNav = {'/personal':true,'/trade/purchase-area':true,'/trade/selling-area':true,'/personal/agreement':true,'/personal/company':true,
     '/trade/purchase':true,'/trade/selling':true,'/trade/pay-seller':true,'/trade/pay':true, '/personal/notice':true,'/personal/record':true,
-    '/personal/setUp':true, '/personal/versionUpdate':true, '/personal/safeCenter':true,};
+    '/personal/setUp':true, '/personal/versionUpdate':true, '/personal/safeCenter':true,'/personal/loginEditpwd':true,'/personal/googleCode':true,
+  '/personal/capitalEditpwd':true,'/personal/editPhone':true,'/personal/bindingPhone':true,'/personal/editEmail':true,'/personal/bindingEmail':true};
 var noNavBtn = {'/personal':true};
 var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true,'/':true,'/price':true,'/trade':true,'/personal':true};
 export default {

@@ -5,7 +5,7 @@
         {{nav.title}}
     </nav>
 
-    <router-view class="Children"/>
+    <router-view class="Children" :class="{'hasNav':hasNav,'hasFooter':hasFooter}"/>
 
     <footer class="footer" v-if="hasFooter">
         <ul>

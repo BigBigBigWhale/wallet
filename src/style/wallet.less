@@ -1,5 +1,6 @@
 .wallet{
     .w-header{
+        position: relative;
         width: 100%;
         height: 5rem;
         box-sizing: border-box;
@@ -16,7 +17,151 @@
           }
 
         }
+        .w-h-top,.w-h-b-left{
+            position: absolute;
+            background-size: cover;
+            z-index: 2;
+        }
+        .w-h-left{
+            top: 0.3rem;
+            left: 0.3rem;
+            width: 0.4rem;
+            height: 0.4rem;
+            background-image: url("../assets/icon/icon-scan.png");
+        }
+        .w-h-right{
+            top: 0.1rem;
+            right: 0.1rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-image: url("../assets/icon/icon-mineral.png");
+        }
+        .w-h-b-left{
+            bottom: 0.1rem;
+            left: 0.3rem;
+            color: #fff;
+            font-size: 0.16rem;
+            z-index: 2;
+            .w-h-b-l-icon{
+                width: 0.4rem;
+                height: 0.4rem;
+                margin-bottom: 0.1rem;
+                background-image: url("../assets/icon/icon-code.png");
+                background-size: cover;
+            }
+        }
+    }
 
+    .w-content{
+        .w-c-li{
+            display: flex;
+            width: 100%;
+            height: 1.4rem;
+            padding: 0 0.3rem;
+            color: #fff;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #4b5a97;
+            border-bottom: 0.01rem solid #2e3a67;
+            &>div{
+                display: flex;
+                width: 33.33%;
+                height: 100%;
+                align-items: center;
+                img{
+                    width: 0.5rem;
+                    margin-right: 0.3rem;
+                }
+                span{
+                    width: 0.8rem;
+                    height: 100%;
+                }
+                &.w-c-li-middle{
+                    flex-flow: column;
+                    justify-content: center;
+                    font-size: 0.2rem;
+                    padding: 0 0.1rem;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        width: 100%;
+                        height: 30%;
+                    }
+                }
+            }
+        }
+    }
+    .w-cover-content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0.86rem 0;
+        border-radius: 0.4rem;
+        background-color: #eee;
+        .w-c-c-close{
+            position: absolute;
+            top: 0.38rem;
+            right: 0.34rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-image: url('../assets/icon/icon_close.png');
+            background-size: cover;
+        }
+        .w-c-c-content{
+            padding: 0.1rem 0;
+            img{
+                display: block;
+
+            }
+            .w-c-c-c-logo{
+                width: 2.5rem;
+                margin: 0.2rem auto;
+            }
+            .w-c-c-c-background{
+                position: relative;
+                width: 3.75rem;
+                height: 6rem;
+                margin: 0.2rem auto;
+                background-image: url('../assets/images/code-background.png');
+                background-size: cover;
+                img{
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 0.6rem;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+            .w-c-c-c-title{
+                color: #000;
+                font-size: 0.32rem;
+                text-align: left;
+                padding: 0 0.3rem;
+                margin-bottom: 0.2rem;
+            }
+            .w-c-c-c-address{
+                color: #000;
+                height: 0.9rem;
+                width: 100%;
+                box-sizing: border-box;
+                border: none;
+                padding: 0 0.3rem;
+                line-height: 0.9rem;
+                background-color: #fff;
+                overflow-y: scroll;
+            }
+            .w-c-c-c-btn{
+                margin-top: 0.4rem;
+                width: 2rem;
+                height: 0.6rem;
+                border: none;
+                color: #fff;
+                font-size: 0.3rem;
+                border-radius: 0.3rem;
+                background-color: #485792;
+            }
+        }
     }
 }
 

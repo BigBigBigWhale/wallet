@@ -12,25 +12,25 @@
           <router-link to="/personal/safeCenter" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">安全中心</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/authentication" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">身份认证</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/accountInfo" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">账户信息</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/invite" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">邀请</div>
           </router-link>
           <router-link to="/personal/cusService" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">客服</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/calcDetail" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">算力明细</div>
           </router-link>
           <router-link to="/" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">资产</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/order" class="personal-li">
               <span class="personal-li-news"></span>
               <div class="personal-li-icon"></div><div class="personal-li-name">我的订单</div>
           </router-link>

@@ -33,6 +33,10 @@ import BindingPhone from '../module/bindingPhone'//绑定手机号
 import EditEmail from '../module/editEmail'//修改邮箱
 import BindingEmail from '../module/bindingEmail'//绑定邮箱
 import AccountInfo from '../module/accountInfo'//账户信息
+import CalcDetail from '../module/calcDetail'//算力明细
+import Invite from '../module/invite'//邀请
+import Order from '../module/order'//我的订单
+import Authentication from '../module/authentication'//身份认证
 Vue.use(Router);
 
 var router = new Router({
@@ -201,7 +205,28 @@ var router = new Router({
       path: '/personal/accountInfo',
       name: '账户信息',
       component: AccountInfo
+    },
+    {
+      path: '/personal/calcDetail',
+      name: '算力明细',
+      component: CalcDetail
+    },
+    {
+      path: '/personal/authentication',
+      name: '身份认证',
+      component: Authentication
+    },
+    {
+      path: '/personal/order',
+      name: '我的订单',
+      component: Order
+    },
+    {
+      path: '/personal/invite',
+      name: '邀请',
+      component: Invite
     }
+
   ]
 });
 export default router;

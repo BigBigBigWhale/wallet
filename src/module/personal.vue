@@ -27,7 +27,7 @@
           <router-link to="/personal/calcDetail" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">算力明细</div>
           </router-link>
-          <router-link to="/" class="personal-li">
+          <router-link to="/personal/assets" class="personal-li">
               <div class="personal-li-icon"></div><div class="personal-li-name">资产</div>
           </router-link>
           <router-link to="/personal/order" class="personal-li">

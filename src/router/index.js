@@ -37,6 +37,13 @@ import CalcDetail from '../module/calcDetail'//算力明细
 import Invite from '../module/invite'//邀请
 import Order from '../module/order'//我的订单
 import Authentication from '../module/authentication'//身份认证
+import Assets from '../module/assets'//资产
+import C2C from '../module/c2c'//资产
+import C2cRecord from '../module/c2cRecord'//交易记录
+import SpotGoods from '../module/spotGoods'//现货资产
+import Bill from '../module/bill'//现货账单
+import Withdraw from '../module/withdraw'//提币
+import Charge from '../module/charge'//充币
 Vue.use(Router);
 
 var router = new Router({
@@ -225,6 +232,41 @@ var router = new Router({
       path: '/personal/invite',
       name: '邀请',
       component: Invite
+    },
+    {
+      path: '/personal/assets',
+      name: '资产',
+      component: Assets
+    },
+    {
+      path: '/personal/c2c',
+      name: 'C2C交易',
+      component: C2C
+    },
+    {
+      path: '/personal/c2cRecord',
+      name: 'C2C交易记录',
+      component: C2cRecord
+    },
+    {
+      path: '/personal/spotGoods',
+      name: '现货资产',
+      component: SpotGoods
+    },
+    {
+      path: '/personal/bill',
+      name: '账单BTC',
+      component: Bill
+    },
+    {
+      path: '/personal/withdraw',
+      name: '提币BTC',
+      component: Withdraw
+    },
+    {
+      path: '/personal/charge',
+      name: '充币BTC',
+      component: Charge
     }
 
   ]

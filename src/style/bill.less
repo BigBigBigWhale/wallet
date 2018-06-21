@@ -1,0 +1,115 @@
+.bill{
+	min-height: 100%;
+	background-color: #e9e9e9;
+	.bill-box{
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.26rem;
+		.bill-buy{
+			color: #fb3030;
+		}
+		.bill-sell{
+			color: #21f358;
+		}
+		&>div{
+			color: #333;
+			span{
+				color: #aaa;
+				margin-right: 0.2rem;
+			}
+		}
+	}
+}
+.withdraw{
+	min-height: 100%;
+	background-color: #e9e9e9;
+	.withdraw-box{
+		margin-top: 0.3rem;
+		#balance{
+			color: #fb3030;
+			&::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+				/* WebKit browsers */
+				color: #fb3030;
+			}
+			&:-moz-placeholder, textarea:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: #fb3030;
+			}
+			&::-moz-placeholder, textarea::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: #fb3030;
+			}
+			&:-ms-input-placeholder, textarea:-ms-input-placeholder {
+				/* Internet Explorer 10+ */
+				color: #fb3030;
+			}
+		}
+		label{
+			font-weight: 600;
+			font-size: 0.28rem;
+		}
+	}
+	.withdraw-desc{
+		padding: 0.2rem 0.3rem;
+		color: #aaa;
+		font-size: 0.2rem;
+		text-align: left;
+	}
+	.withdraw-btn{
+		width: 5.5rem;
+		height: 0.88rem;
+		color: #fff;
+		margin-top: 0.5rem;
+		font-size: 0.34rem;
+		border-radius: 0.16rem;
+		background-color: #4b5a97;
+
+	}
+}
+
+.charge{
+	min-height: 100%;
+	background-color: #e9e9e9;
+	.charge-desc{
+		color: #7c86ae;
+		padding: 0.3rem;
+		text-align: left;
+		font-size: 0.26rem;
+		line-height: 0.4rem;
+	}
+	.charge-qrcode{
+		padding: 0.3rem;
+		img{
+			width: 2.35rem;
+			height: 2.35rem;
+		}
+	}
+	.charge-title{
+		color: #000;
+		font-size: 0.32rem;
+		text-align: left;
+		padding: 0 0.3rem;
+		margin-bottom: 0.2rem;
+	}
+	.charge-address{
+		color: #000;
+		height: 0.9rem;
+		width: 100%;
+		box-sizing: border-box;
+		border: none;
+		padding: 0 0.3rem;
+		line-height: 0.9rem;
+		background-color: #fff;
+		overflow-y: scroll;
+	}
+	.charge-btn{
+		margin-top: 0.4rem;
+		width: 2rem;
+		height: 0.6rem;
+		border: none;
+		color: #fff;
+		font-size: 0.3rem;
+		border-radius: 0.3rem;
+		background-color: #485792;
+	}
+}

@@ -49,6 +49,7 @@ import BuyAd from '../module/buyAd' //购买广告
 import SellAd from '../module/sellAd'//出售广告
 import BuyAded from '../module/buyAded'//已购买广告
 import SellAded from '../module/sellAded'//已出售广告
+import Mine from '../module/mine'//采矿
 Vue.use(Router);
 
 var router = new Router({
@@ -297,6 +298,11 @@ var router = new Router({
       path: '/personal/sellAded',
       name: '已出售广告',
       component: SellAded
+    },
+    {
+      path: '/mine',
+      name: '采矿',
+      component: Mine
     }
 
   ]

@@ -2,7 +2,7 @@
   <div class="wallet">
     <div class="w-header">
         <div class="w-h-top w-h-left" @click="scan()"></div>
-        <div class="w-h-top w-h-right"></div>
+        <div class="w-h-top w-h-right" @click="goMine()"></div>
         <div class="w-h-middle">
           <div id="myChart" style="width: 4rem;height: 4rem;"></div>
         </div>
@@ -85,6 +85,9 @@ export default {
     }
   },
   methods:{
+      goMine(){
+          this.$router.push('/mine');
+      },
       openCode (){
           this.$refs.cover.show();
       },

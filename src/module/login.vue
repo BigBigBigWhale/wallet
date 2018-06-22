@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="login-sign">
-      <img src="../assets/icon/icon_logo.svg" alt="logo">
+      <img src="../assets/images/icon-login-logo.png" alt="logo">
     </div>
     <form>
       <div class="login-input-box">

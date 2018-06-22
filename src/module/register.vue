@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="resgist-sign">
-      <img src="/src/assets/icon/icon-resgist-logo.svg" alt="">
+      <img src="../assets/images/icon-res-logo.png" alt="">
     </div>
     <form>
       <div class="login-input-box">

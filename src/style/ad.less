@@ -1,0 +1,102 @@
+.buyAd,.buyAded,.sellAd,.sellAded{
+	min-height: 100%;
+	background-color: #e9e9e9;
+	color: #333;
+	font-size: 0.28rem;
+	&.listModule{
+		.list-box {
+			.list-box-content {
+				display: flex;
+				background-color: #fff;
+				.list-box-portrait{
+					width: 1rem;
+					height: 1.5rem;
+					img{
+						width: 0.9rem;
+						height: 0.9rem;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+.buyAd,.sellAd{
+	&.listModule{
+		.list-box{
+			.list-box-title{
+				padding-left: 1.36rem;
+			}
+			.list-box-content{
+				.list-box-portrait{
+					padding-top: 0.3rem;
+
+				}
+				.list-box-right{
+					width:calc(~"100% - 1rem");
+					font-size: 0.24rem;
+					&>div:nth-of-type(1){
+						display: flex;
+						justify-content: space-around;
+						height: 0.9rem;
+						&>div{
+							display: flex;
+							flex-flow: column;
+							align-items: flex-start;
+							&:nth-of-type(1){
+								padding-top: 0.02rem;
+							}
+							span{
+								display: inline-flex;
+								height: 50%;
+								align-items: center;
+								span{
+									margin-right: 0.1rem;
+								}
+							}
+						}
+					}
+					&>div:nth-of-type(2){
+						height: 0.6rem;
+						padding-left: 0.6rem;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.buyAded,.sellAded{
+	&.listModule{
+		.list-box{
+			.list-box-content {
+				height: 2.1rem;
+				justify-content: space-around;
+				.list-box-portrait{
+					img{
+						margin-bottom: 0.06rem;
+					}
+				}
+				.list-box-two{
+					padding-top: 0.06rem;
+				}
+				.list-box-cum{
+					display: flex;
+					flex-flow: column;
+					justify-content: space-around;
+					span{
+						width: 100%;
+						text-align: left;
+					}
+					.blueFont{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

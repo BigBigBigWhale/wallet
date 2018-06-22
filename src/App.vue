@@ -15,7 +15,7 @@
             <li v-if="footerOpt=='/price'" class="active" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price-actv.png" alt="行情">行情</router-link></BaseButton></li>
           <li v-else class="" @click="choiceFooterOpt('/price')"><BaseButton><router-link to="/price"><img src="./assets/icon/icon-price.png" alt="行情">行情</router-link></BaseButton></li>
 
-          <li v-if="footerOpt=='/trade'" class="active" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade-actv.png" alt="交易">交易</router-link></BaseButton></li>
+          <li v-if="footerOpt=='/trade'||footerOpt=='/trade2'" class="active" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade-actv.png" alt="交易">交易</router-link></BaseButton></li>
           <li v-else class="" @click="choiceFooterOpt('/trade')"><BaseButton><router-link to="/trade"><img src="./assets/icon/icon-trade.png" alt="交易">交易</router-link></BaseButton></li>
 
           <li v-if="footerOpt=='/personal'" class="active" @click="choiceFooterOpt('/personal')"><BaseButton><router-link to="/personal"><span class="footer-news"></span><img src="./assets/icon/icon-user-actv.png" alt="我的">我的</router-link></BaseButton></li>
@@ -32,13 +32,14 @@ import globalDate from './router/globalDate'
 import BaseButton from './components/baseButtonCpt'
 import Storage from './components/Storage'
 
-var hasFooter = {'/':true,'/price':true,'/trade':true,'/personal':true};
+var hasFooter = {'/':true,'/price':true,'/trade':true,'/trade2':true,'/personal':true};
 var hasNav = {'/personal':true,'/trade/purchase-area':true,'/trade/selling-area':true,'/personal/agreement':true,'/personal/company':true,
     '/trade/purchase':true,'/trade/selling':true,'/trade/pay-seller':true,'/trade/pay':true, '/personal/notice':true,'/personal/record':true,
     '/personal/setUp':true, '/personal/versionUpdate':true, '/personal/safeCenter':true,'/personal/loginEditpwd':true,'/personal/googleCode':true,
   '/personal/capitalEditpwd':true,'/personal/editPhone':true,'/personal/bindingPhone':true,'/personal/editEmail':true,'/personal/bindingEmail':true,
     '/trade2/releaseTrade':true,'/personal/accountInfo':true,'/personal/calcDetail':true,'/personal/order':true,'/personal/authentication':true,
-    '/personal/assets':true,'/personal/c2cRecord':true,'/personal/spotGoods':true,'/personal/bill':true,'/personal/withdraw':true,'/personal/charge':true};
+    '/personal/assets':true,'/personal/c2cRecord':true,'/personal/spotGoods':true,'/personal/bill':true,'/personal/withdraw':true,'/personal/charge':true,
+    '/personal/buyAd':true,'/personal/buyAded':true,'/personal/sellAd':true,'/personal/sellAded':true,'/personal/c2cDetail':true};
 var noNavBtn = {'/personal':true,'/trade2/releaseTrade':true};
 var unwantedLogin= {'/login':true,'/register':true,'/forget-password':true,'/':true,'/price':true,'/trade':true,'/personal':true};
 export default {

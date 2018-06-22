@@ -1,12 +1,12 @@
 <template>
   <div class="setUp">
     <ul class="setUpbox clearfix">
-      <li class="liTitle"><router-link to="/">我的广告</router-link></li>
-      <li><router-link to="/">购买广告</router-link></li>
-      <li><router-link to="/">出售广告</router-link></li>
-      <li class="liTitle" ><router-link to="/">完成订单</router-link></li>
-      <li><router-link to="/">已购买订单</router-link></li>
-      <li><router-link to="/">已出售订单</router-link></li>
+      <li class="liTitle">我的广告</li>
+      <router-link to="/personal/buyAd"><li>购买广告</li></router-link>
+      <router-link to="/personal/sellAd"><li>出售广告</li></router-link>
+      <li class="liTitle" >完成订单</li>
+      <router-link to="/personal/buyAded"><li>已购买订单</li></router-link>
+      <router-link to="/personal/sellAded"><li>已出售订单</li></router-link>
     </ul>
   </div>
 </template>

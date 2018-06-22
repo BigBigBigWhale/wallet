@@ -1,9 +1,9 @@
 <template>
   <div class="trade">
     <div class="trade-nav">
-      <span class="trade-nav-left"><img src="../assets/icon/icon-trade2.png"></span>
+      <router-link to="/trade2" class="trade-nav-left"><img src="../assets/icon/icon-trade2.png"></router-link>
       交易
-      <span class="trade-nav-right"><img src="../assets/icon/icon-add.png"></span>
+      <router-link to="/trade2/releaseTrade" class="trade-nav-right"><img src="../assets/icon/icon-add.png"></router-link>
     </div>
     <div class="trade-top">
        <div class="trade-logo"></div>

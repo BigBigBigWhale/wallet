@@ -40,10 +40,15 @@ import Authentication from '../module/authentication'//身份认证
 import Assets from '../module/assets'//资产
 import C2C from '../module/c2c'//资产
 import C2cRecord from '../module/c2cRecord'//交易记录
+import C2cDetail from '../module/c2cDetail'//付款详情
 import SpotGoods from '../module/spotGoods'//现货资产
 import Bill from '../module/bill'//现货账单
 import Withdraw from '../module/withdraw'//提币
 import Charge from '../module/charge'//充币
+import BuyAd from '../module/buyAd' //购买广告
+import SellAd from '../module/sellAd'//出售广告
+import BuyAded from '../module/buyAded'//已购买广告
+import SellAded from '../module/sellAded'//已出售广告
 Vue.use(Router);
 
 var router = new Router({
@@ -249,6 +254,11 @@ var router = new Router({
       component: C2cRecord
     },
     {
+      path: '/personal/c2cDetail',
+      name: 'C2C交易记录',
+      component: C2cDetail
+    },
+    {
       path: '/personal/spotGoods',
       name: '现货资产',
       component: SpotGoods
@@ -267,6 +277,26 @@ var router = new Router({
       path: '/personal/charge',
       name: '充币BTC',
       component: Charge
+    },
+    {
+      path: '/personal/buyAd',
+      name: '购买广告',
+      component: BuyAd
+    },
+    {
+      path: '/personal/sellAd',
+      name: '出售广告',
+      component: SellAd
+    },
+    {
+      path: '/personal/buyAded',
+      name: '已购买广告',
+      component: BuyAded
+    },
+    {
+      path: '/personal/sellAded',
+      name: '已出售广告',
+      component: SellAded
     }
 
   ]

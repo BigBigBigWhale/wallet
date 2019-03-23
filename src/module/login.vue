@@ -39,13 +39,14 @@
     import globalDate from '../router/globalDate'
     import Storage from '../components/Storage'
     import VerifyRule from '../components/verifyRule'
+    import server from '../router/server'
     var storage = new Storage('login', window.localStorage);
     export default {
         name:'login',
         data () {
             return {
-                phone:'',
-                password:'',
+                phone:'15755028927',
+                password:'12',
                 language:'zh',
                 isChoiceLanguage:false,
             }
@@ -65,7 +66,10 @@
               globalDate.user = this.phone;
               storage.set('user',this.phone);
               //TODO 访问登陆借口
-              this.$router.push("/");
+              server.getPhoneCode({user_phone:157827232}).done(res =>{
+                console.log(res)
+              })
+//              this.$router.push("/");
             }else{
               alert(result.message);
             }
